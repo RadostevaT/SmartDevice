@@ -2,13 +2,22 @@
   display: inline-flex;
   padding: 10px 20px;
 
-  color: $color-default-white;
+  font-family: $ff-roboto-condenced;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
 
-  background-color: $color-neon-blue;
+  letter-spacing: 0.05em;
+
+  color: $color-default-white;
+  background-color: $color-black-pearl-second;
   border: none;
+  border-radius: 3px;
   cursor: pointer;
 
   transition: opacity $trans-default;
+
+  text-transform: uppercase;
 
   &--red {
     background-color: $color-torch-red;
@@ -22,5 +31,16 @@
 
   @include hover-focus {
     opacity: 0.8;
+  }
+}
+
+
+.btn--callback {
+  padding: 11px 15px;
+  background-color: $color-transparent;
+  border: 1px solid $color-alice-blue;
+
+  @include vp-1023 {
+    display: none;
   }
 }

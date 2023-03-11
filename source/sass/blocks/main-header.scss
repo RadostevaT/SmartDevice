@@ -5,6 +5,7 @@
 
   @include vp-1023 {
     position: absolute;
+    padding: 0 50px;
   }
 
   @include vp-767 {
@@ -14,7 +15,7 @@
 
 .main-header__wrapper {
   margin: 0 auto;
-  max-width: 1160px;
+  max-width: 1220px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -64,6 +65,7 @@
   @include vp-1023 {
     min-width: 100px;
     padding: 20px 0 40px;
+    margin-right: 20px;
   }
 
   @include vp-767 {

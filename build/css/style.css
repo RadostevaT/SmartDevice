@@ -654,7 +654,7 @@ button,
   line-height: 16px;
   letter-spacing: 0.05em;
   color: #ffffff;
-  background-color: #041427;
+  background-color: #041827;
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -687,6 +687,14 @@ button,
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
+}
+
+.btn--consultation {
+  color: #f2f5f6;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 15px 25px;
+  background-color: #00b2ff;
 }
 
 .modal {
@@ -1525,6 +1533,49 @@ button,
   margin-bottom: 10px;
 }
 
+.promo {
+  background-color: #041827;
+  background-image: url("../../img/main-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 880px;
+}
+
+.promo__wrapper {
+  margin: 0 auto;
+  min-width: 720px;
+  max-width: 800px;
+  padding-top: 305px;
+}
+
+.promo__title {
+  margin: 0 0 40px 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #f2f5f6;
+}
+
+.promo__subtitle {
+  margin: 0 0 40px 0;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: #f2f5f6;
+}
+
+.promo__btn-text {
+  display: block;
+}
+
+.promo__btn-text--short {
+  display: none;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1583,6 +1634,10 @@ button,
 
   .btn--accordion {
     margin-top: 0;
+  }
+
+  .btn--consultation {
+    margin-left: 45px;
   }
 
   .main-header {
@@ -1651,6 +1706,26 @@ button,
   .main-footer__address {
     max-width: 320px;
   }
+
+  .promo {
+    min-height: 640px;
+    background-position: top left -123px;
+  }
+
+  .promo__wrapper {
+    min-width: 660px;
+    padding: 180px 50px 0;
+  }
+
+  .promo__title {
+    font-size: 64px;
+    line-height: 75px;
+    margin-bottom: 20px;
+  }
+
+  .promo__subtitle {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1680,6 +1755,17 @@ button,
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+  }
+
+  .btn--consultation {
+    margin: 0;
+    padding: 10px 30px;
+    font-size: 14px;
+    line-height: 16px;
+    width: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .modal__wrapper {
@@ -1790,6 +1876,34 @@ button,
   .main-footer__phones a {
     font-size: 14px;
   }
+
+  .promo {
+    min-height: 560px;
+    background-position: top left -229px;
+  }
+
+  .promo__wrapper {
+    min-width: 270px;
+    padding: 150px 25px 0;
+  }
+
+  .promo__title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .promo__subtitle {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .promo__btn-text--full {
+    display: none;
+  }
+
+  .promo__btn-text--short {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1866,5 +1980,11 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .promo {
+    background-image: url("../../img/main-background@2x.jpg");
   }
 }

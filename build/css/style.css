@@ -445,7 +445,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #f8fdff;
 }
 
 a {
@@ -1576,6 +1576,76 @@ button,
   display: none;
 }
 
+.advantages__wrapper {
+  margin: 0 auto;
+  max-width: 1220px;
+  padding: 120px 0 120px;
+}
+
+.advantages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.advantages__item {
+  max-width: 595px;
+  padding: 40px 45px 35px;
+  border: 1px solid #ebebeb;
+  position: relative;
+  min-height: 300px;
+}
+
+.advantages__item::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background-color: #00b2ff;
+}
+
+.advantages__item svg {
+  fill: #00b2ff;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.advantages__item h3 {
+  margin: 0;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #00b2ff;
+  margin-bottom: 15px;
+}
+
+.advantages__item p {
+  line-height: 22px;
+  margin: 0;
+}
+
+.advantages__item:hover {
+  background-color: #00b2ff;
+  border-color: #00b2ff;
+}
+
+.advantages__item:hover svg {
+  fill: #f2f5f6;
+}
+
+.advantages__item:hover h3,
+.advantages__item:hover p {
+  color: #f2f5f6;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1617,15 +1687,9 @@ button,
   }
 */
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
-  }
-}
-
 @media (max-width: 1023px) {
   .container {
-    padding: 0 24px;
+    padding: 0 50px;
   }
 
   .btn--callback {
@@ -1642,7 +1706,6 @@ button,
 
   .main-header {
     position: absolute;
-    padding: 0 50px;
   }
 
   .main-header__logo-link {
@@ -1726,11 +1789,16 @@ button,
   .promo__subtitle {
     margin-bottom: 50px;
   }
+
+  .advantages__item {
+    min-height: 360px;
+    padding: 40px 30px 35px 45px;
+  }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    padding: 0 25px;
   }
 
   .btn--accordion {
@@ -1779,10 +1847,6 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
-  }
-
-  .main-header {
-    padding: 0 35px;
   }
 
   .main-header__wrapper {
@@ -1903,6 +1967,27 @@ button,
 
   .promo__btn-text--short {
     display: block;
+  }
+
+  .advantages__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .advantages__item {
+    max-width: 100%;
+    min-height: 340px;
+    padding: 30px 30px 35px;
+  }
+
+  .advantages__item h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .advantages__item p {
+    font-size: 14px;
+    line-height: 19px;
   }
 }
 

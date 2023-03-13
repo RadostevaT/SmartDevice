@@ -97,3 +97,11 @@
     justify-content: center;
   }
 }
+
+.btn--details {
+  color: $color-deep-sky-blue;
+  padding: 14px 50px;
+  background-color: $color-white-translucent;
+  border: 1px solid $color-deep-sky-blue;
+  width: fit-content;
+}

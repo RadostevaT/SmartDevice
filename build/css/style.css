@@ -1836,6 +1836,10 @@ button,
     min-height: 360px;
     padding: 40px 30px 35px 45px;
   }
+
+  .about__wrapper {
+    padding-left: 175px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2030,6 +2034,29 @@ button,
   .advantages__item p {
     font-size: 14px;
     line-height: 19px;
+  }
+
+  .about__wrapper {
+    background-size: 0;
+    padding-left: 0;
+  }
+
+  .about__wrapper h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about__wrapper p {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 24px;
+  }
+
+  .about__wrapper span {
+    font-size: 14px;
+    line-height: 19px;
+    display: block;
+    margin-bottom: 24px;
   }
 }
 

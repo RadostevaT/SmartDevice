@@ -2,6 +2,8 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordions} from './modules/accordions/init-accordion';
+import {initDynamicAdaptive} from './modules/dynamic-adaptive/init-dynamic-adaptive';
+import {readMore} from './modules/init-read-more';
 
 // ---------------------------------
 
@@ -23,6 +25,8 @@ window.addEventListener('DOMContentLoaded', () => {
     window.form = form;
     form.init();
     initAccordions();
+    initDynamicAdaptive();
+    readMore();
   });
 });
 

@@ -66,7 +66,7 @@
       position: absolute;
       width: 15px;
       height: 1px;
-      background-color: $silver;
+      background-color: $color-silver;
       right: 25px;
       top: 27px;
     }
@@ -104,4 +104,17 @@
   background-color: $color-white-translucent;
   border: 1px solid $color-deep-sky-blue;
   width: fit-content;
+}
+
+.btn--question {
+  background-color: $color-black-pearl;
+  padding: 15px 25px;
+  font-size: 16px;
+  line-height: 19px;
+  width: 265px;
+  display: block;
+
+  @include vp-767 {
+    width: 100%;
+  }
 }

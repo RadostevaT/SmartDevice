@@ -1,138 +1,55 @@
 .custom-toggle {
   position: relative;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
 
-  display: flex;
-  width: 500px;
-  padding: 14px 0 10px 36px;
+  max-width: 260px;
 
-  @media screen and (max-width: 767px) {
-    padding: 14px 0 10px 0;
-    width: 100%;
-  }
-
-  &:last-of-type {
-    padding: 14px 0 58px 36px;
-
-    @media screen and (max-width: 767px) {
-      padding: 14px 0 58px 0;
-    }
+  @include vp-767 {
+    max-width: 100%;
   }
 
   input {
-    position: absolute;
+    appearance: none;
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $color-default-white;
+    border-radius: 3px;
+    transition: border 0.3s ease;
 
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    &::before {
+      content: "";
+      position: relative;
+      display: block;
+      width: 9px;
+      height: 6px;
+      top: 3px;
+      left: 2px;
+      background-image: url(../../img/svg/checkbox-arrow.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: scale(0);
+    }
 
-    clip: rect(0 0 0 0);
+    &:checked::before {
+      transform: scale(1);
+    }
   }
 
   label {
-    position: relative;
-
-    padding-left: 52px;
+    display: grid;
+    grid-template-columns: 15px auto;
+    gap: 10px;
+    align-items: center;
 
     cursor: pointer;
-
-    span {
-      margin-bottom: 0;
-      margin-left: 0;
-    }
-  }
-
-  &--checkbox {
-    .custom-toggle__icon {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 28px;
-      height: 28px;
-
-      border: 1.5px solid #2c39f2;
-
-      transition: border 0.3s ease;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        width: 20px;
-        height: 20px;
-
-        background-color: rgba(#2c39f2, 0);
-
-        transform: translate(-50%, -50%);
-
-        transition: background-color 0.3s ease;
-      }
-    }
-  }
-
-  &--radio {
-    .custom-toggle__icon {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 28px;
-      height: 28px;
-
-      border: 1px solid #2c39f2;
-      border-radius: 50%;
-
-      transition: border 0.3s ease;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        width: 20px;
-        height: 20px;
-
-        color: rgba(255, 255, 255, 0);
-
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-
-        transition: color 0.3s ease;
-      }
-    }
-  }
-
-  input:checked + .custom-toggle__icon {
-    border: 1.5px solid #2c39f2;
-
-    &::before {
-      background-color: #2c39f2;
-    }
   }
 
   &.is-invalid {
-    label span {
-      color: #ff1553;
-    }
-  }
-
-  .input-message {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
-
-    &.is-invalid {
-      color: #ff0000;
-    }
-
-    &.is-valid {
-      color: #15ab07;
+    input {
+      border: 1px solid $color-torch-red;
     }
   }
 }

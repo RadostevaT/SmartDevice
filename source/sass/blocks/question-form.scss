@@ -9,44 +9,6 @@
   }
 }
 
-.question-form__field--textarea {
-  grid-column: 1 / -1;
-}
-
-.question-form__field input,
-.question-form__field textarea {
-  width: 100%;
-  padding: 15px;
-  color: $color-default-white;
-  line-height: 20px;
-  background-color: $color-black-pearl-transparent;
-  border: 0;
-  border-radius: 3px;
-
-  &::placeholder {
-    color: $color-default-white;
-  }
-}
-
-.question-form__field textarea {
-  min-height: 155px;
-
-  @include vp-1023 {
-    padding: 32px 15px;
-  }
-
-  @include vp-767 {
-    padding: 25px 15px;
-  }
-}
-
-.question-form__field .is-invalid,
-.question-form__agreement .is-invalid {
-  font-size: 14px;
-  line-height: 19px;
-  color: $color-default-white;
-}
-
 .question-form__bottom {
   grid-column: 1 / -1;
   display: grid;
@@ -56,50 +18,5 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
-  }
-}
-
-.question-form__agreement {
-  max-width: 260px;
-
-  @include vp-767 {
-    max-width: 100%;
-  }
-}
-
-.question-form__agreement label {
-  font-size: 14px;
-  line-height: 16px;
-  color: $color-default-white;
-  display: grid;
-  grid-template-columns: 15px auto;
-  gap: 10px;
-  align-items: center;
-}
-
-.question-form__agreement input {
-  appearance: none;
-  margin: 0;
-  width: 15px;
-  height: 15px;
-  border: 1px solid $color-default-white;
-  border-radius: 3px;
-
-  &::before {
-    content: "";
-    position: relative;
-    display: block;
-    width: 9px;
-    height: 6px;
-    top: 3px;
-    left: 2px;
-    background-image: url(../../img/svg/checkbox-arrow.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: scale(0);
-  }
-
-  &:checked::before {
-    transform: scale(1);
   }
 }

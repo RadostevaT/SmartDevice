@@ -194,24 +194,24 @@
             <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
             <div data-form-validate data-callback="base">
               <form class="question-form" action="https://echo.htmlacademy.ru" method="post">
-                <div class="question-form__field" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-required>
+                <div class="custom-input" data-validate-type="text" data-limitation="name" data-required>
                   <label>
                     <input type="text" name="name" placeholder="Имя">
                   </label>
                 </div>
-                <div class="question-form__field" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте правильность данных" data-required>
+                <div class="custom-input" data-validate-type="phone" data-on-input-validate data-required>
                   <label>
                     <input type="tel" name="phone-number" placeholder="Телефон">
                   </label>
                 </div>
-                <div class="question-form__field question-form__field--textarea" data-validate-type="text">
+                <div class="custom-textarea" data-validate-type="text">
                   <label>
                     <textarea name="question" placeholder="Ваш вопрос"></textarea>
                   </label>
                 </div>
                 <div class="question-form__bottom">
                   <button class="btn btn--question" type="submit">Задать вопрос</button>
-                  <div class="question-form__agreement" data-validate-type="checkbox" data-message-base="Согласие обязательно">
+                  <div class="custom-toggle" data-validate-type="checkbox">
                     <label>
                       <input type="checkbox" name="agreement">
                       Я&nbsp;согласен на&nbsp;обработку персональных данных

@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 import {initAccordions} from './modules/accordions/init-accordion';
 import {initDynamicAdaptive} from './modules/dynamic-adaptive/init-dynamic-adaptive';
 import {readMore} from './modules/init-read-more';
+import {initScroll} from './modules/scrollto';
 
 // ---------------------------------
 
@@ -27,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initAccordions();
     initDynamicAdaptive();
     readMore();
+    initScroll();
   });
 });
 

@@ -50,10 +50,10 @@
         <div class="promo__wrapper">
           <h1>Печатные платы</h1>
           <h2>производство и монтаж, поставка комплектующих, блоков и модулей</h2>
-          <button class="btn btn--consultation" type="button">
+          <a class="btn btn--consultation" href="#consultation" data-scroll-to-button>
             <span class="promo__btn-text promo__btn-text--full">Получить бесплатную консультацию</span>
             <span class="promo__btn-text promo__btn-text--short">бесплатная консультация</span>
-          </button>
+          </a>
         </div>
       </section>
       <section class="advantages container">
@@ -181,7 +181,7 @@
           </div>
         </div>
       </section>
-      <section class="consultation container">
+      <section class="consultation container" id="consultation">
         <div class="consultation__wrapper">
           <picture>
             <source type="image/webp" width="510" height="285"
@@ -192,7 +192,7 @@
           <div class="consultation__inner">
             <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
             <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
-            <div data-form-validate>
+            <div data-form-validate data-callback="base">
               <form class="question-form" action="https://echo.htmlacademy.ru" method="post">
                 <div class="question-form__field" data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно к заполнению" data-required>
                   <label>

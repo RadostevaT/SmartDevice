@@ -6,6 +6,10 @@
 
   max-width: 260px;
 
+  &--callback {
+    max-width: 100%;
+  }
+
   @include vp-767 {
     max-width: 100%;
   }

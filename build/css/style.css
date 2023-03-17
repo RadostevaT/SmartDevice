@@ -673,14 +673,14 @@ button,
   opacity: 0.8;
 }
 
-.btn--callback {
+.btn-call-request {
   padding: 11px 15px;
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid #f2f5f6;
   margin-right: 60px;
 }
 
-.btn--accordion {
+.btn-accordion {
   margin: 5px 0 20px;
   padding: 0;
   background-color: rgba(255, 255, 255, 0);
@@ -689,7 +689,7 @@ button,
   line-height: 16px;
 }
 
-.btn--consultation {
+.btn-consultation {
   color: #f2f5f6;
   font-size: 18px;
   line-height: 21px;
@@ -697,7 +697,7 @@ button,
   background-color: #00b2ff;
 }
 
-.btn--details {
+.btn-details {
   color: #00b2ff;
   padding: 14px 50px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -707,13 +707,41 @@ button,
   width: fit-content;
 }
 
-.btn--question {
+.btn-question {
   background-color: #041827;
   padding: 15px 25px;
   font-size: 16px;
   line-height: 19px;
   width: 265px;
   display: block;
+}
+
+.btn-callback {
+  display: block;
+  font-size: 16px;
+  line-height: 18px;
+  padding: 14px 60px;
+  margin-top: 5px;
+}
+
+.btn-reset::before,
+.btn-reset::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 28px;
+  top: 6px;
+  left: 20px;
+  background-color: #ffffff;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.btn-reset::after {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .modal {
@@ -732,7 +760,7 @@ button,
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(3, 16, 27, 0.7);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -781,15 +809,17 @@ button,
 
 .modal__content {
   position: relative;
-  width: 600px;
+  border-radius: 3px;
+  width: 500px;
   padding: 40px;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #00b2ff;
 }
 
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 15px;
+  right: 15px;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -826,6 +856,21 @@ button,
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+}
+
+.modal__content h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 42px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.modal__content p {
+  margin: 0;
+  line-height: 22px;
+  margin-bottom: 40px;
 }
 
 [data-accordion=element].is-active > [data-accordion=content] {
@@ -877,7 +922,7 @@ button,
   width: 100%;
   color: #ffffff;
   line-height: 18px;
-  background-color: rgba(4, 20, 39, 0.15);
+  background-color: rgba(4, 24, 39, 0.15);
   border: 1px solid rgba(255, 255, 255, 0);
   border-radius: 3px;
   outline: none;
@@ -961,6 +1006,10 @@ button,
   line-height: 16px;
   color: #ffffff;
   max-width: 260px;
+}
+
+.custom-toggle--callback {
+  max-width: 100%;
 }
 
 .custom-toggle input {
@@ -1304,6 +1353,7 @@ button,
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  padding: 0;
 }
 
 .main-header__wrapper {
@@ -1324,6 +1374,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding: 0 40px;
 }
 
 .main-header__logo-link {
@@ -1784,6 +1835,17 @@ button,
   align-items: end;
 }
 
+.callback-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1830,15 +1892,15 @@ button,
     padding: 0 50px;
   }
 
-  .btn--callback {
+  .btn-call-request {
     display: none;
   }
 
-  .btn--accordion {
+  .btn-accordion {
     margin-top: 0;
   }
 
-  .btn--consultation {
+  .btn-consultation {
     margin-left: 45px;
   }
 
@@ -1848,6 +1910,10 @@ button,
 
   .main-header {
     position: absolute;
+  }
+
+  .main-header__wrapper {
+    padding: 0;
   }
 
   .main-header__logo-link {
@@ -1966,10 +2032,6 @@ button,
     left: 45px;
   }
 
-  .consultation {
-    scroll-margin-top: 100px;
-  }
-
   .consultation::before {
     display: none;
   }
@@ -1993,15 +2055,15 @@ button,
     padding: 0 25px;
   }
 
-  .btn--accordion {
+  .btn-accordion {
     margin: 0;
     width: 100%;
     padding: 20px 25px;
     position: relative;
   }
 
-  .btn--accordion::before,
-  .btn--accordion::after {
+  .btn-accordion::before,
+  .btn-accordion::after {
     content: "";
     position: absolute;
     width: 15px;
@@ -2011,13 +2073,13 @@ button,
     top: 27px;
   }
 
-  .btn--accordion::after {
+  .btn-accordion::after {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
   }
 
-  .btn--consultation {
+  .btn-consultation {
     margin: 0;
     padding: 10px 30px;
     font-size: 14px;
@@ -2028,7 +2090,7 @@ button,
     justify-content: center;
   }
 
-  .btn--question {
+  .btn-question {
     width: 100%;
   }
 
@@ -2239,10 +2301,6 @@ button,
     top: 30px;
     left: 30px;
     font-size: 20px;
-  }
-
-  .consultation {
-    scroll-margin-top: 70px;
   }
 
   .consultation__wrapper {

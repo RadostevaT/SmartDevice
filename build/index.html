@@ -17,7 +17,7 @@
 <body>
   <div class="wrapper">
     <header>
-      <div class="container main-header">
+      <div class="container main-header" data-fix-block>
         <div class="main-header__wrapper">
           <a class="main-header__logo-link" href="#">
             <svg class="main-header__logo main-header__logo--desktop" width="215" height="55">
@@ -41,16 +41,16 @@
               <span>+7 (495) 000 52 52</span>
             </a>
           </div>
-          <a class="btn btn--callback" href="#" data-open-modal="feedback">Заказать звонок</a>
+          <a class="btn btn-call-request" href="#" data-open-modal="feedback">Заказать звонок</a>
         </div>
       </div>
     </header>
     <main>
-      <section class="promo">
+      <section class="promo container">
         <div class="promo__wrapper">
           <h1>Печатные платы</h1>
           <h2>производство и монтаж, поставка комплектующих, блоков и модулей</h2>
-          <a class="btn btn--consultation" href="#consultation" data-scroll-to-button>
+          <a class="btn btn-consultation" href="#consultation" data-scroll-to-button>
             <span class="promo__btn-text promo__btn-text--full">Получить бесплатную консультацию</span>
             <span class="promo__btn-text promo__btn-text--short">бесплатная консультация</span>
           </a>
@@ -118,7 +118,7 @@
                 внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших
                 клиентов.</p>
             </div>
-            <button class="btn btn--details" type="button" data-accordion="button"
+            <button class="btn btn-details" type="button" data-accordion="button"
               data-read-more="button">Подробнее</button>
           </div>
         </div>
@@ -210,7 +210,7 @@
                   </label>
                 </div>
                 <div class="question-form__bottom">
-                  <button class="btn btn--question" type="submit">Задать вопрос</button>
+                  <button class="btn btn-question" type="submit">Задать вопрос</button>
                   <div class="custom-toggle" data-validate-type="checkbox">
                     <label>
                       <input type="checkbox" name="agreement">
@@ -256,7 +256,7 @@
           </div>
           <div class="accordion" data-accordion="parent" data-destroy="(max-width: 767px)" data-single>
             <div class="accordion__element" data-accordion="element">
-              <button class="btn btn--accordion" type="button" data-accordion="button">Разделы сайта</button>
+              <button class="btn btn-accordion" type="button" data-accordion="button">Разделы сайта</button>
               <div class="accordion__content" data-accordion="content">
                 <nav class="main-footer__nav">
                   <a class="main-footer__nav-link" href="#">О Компании</a>
@@ -270,7 +270,7 @@
               </div>
             </div>
             <div class="accordion__element" data-accordion="element">
-              <button class="btn btn--accordion" type="button" data-accordion="button">Наш офис</button>
+              <button class="btn btn-accordion" type="button" data-accordion="button">Наш офис</button>
               <div class="accordion__content" data-accordion="content">
                 <address class="main-footer__address">
                   <p>г. Мытищи, Олимпийский проспект, д.10</p>
@@ -286,6 +286,44 @@
         </div>
       </div>
     </footer>
+  </div>
+
+  <!-- Модалки -->
+  <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <h2>Закажите звонок</h2>
+        <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+        <div data-form-validate data-callback="base">
+          <form class="callback-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="custom-input" data-validate-type="text" data-limitation="name" data-required>
+              <label>
+                <input type="text" name="name" placeholder="Имя">
+              </label>
+            </div>
+            <div class="custom-input" data-validate-type="phone" data-on-input-validate data-required>
+              <label>
+                <input type="tel" name="phone-number" placeholder="Телефон">
+              </label>
+            </div>
+            <div class="custom-textarea" data-validate-type="text">
+              <label>
+                <textarea name="question" placeholder="Ваш вопрос"></textarea>
+              </label>
+            </div>
+            <button class="btn btn-callback" type="submit">Отправить</button>
+            <div class="custom-toggle custom-toggle--callback" data-validate-type="checkbox">
+              <label>
+                <input type="checkbox" name="agreement">
+                Я&nbsp;согласен на&nbsp;обработку персональных данных
+              </label>
+            </div>
+          </form>
+        </div>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal></button>
+      </div>
+    </div>
   </div>
 
   <script src="js/vendor.min.js"></script>

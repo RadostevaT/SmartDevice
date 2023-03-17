@@ -2,6 +2,7 @@
   position: fixed;
   z-index: 10;
   background: $black-to-bottom;
+  padding: 0;
 
   @include vp-1023 {
     position: absolute;
@@ -16,6 +17,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 0 40px;
+
+  @include vp-1023 {
+    padding: 0;
+  }
 
   @include vp-767 {
     min-width: 259px;

@@ -10,7 +10,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    clip-path: polygon(0 0, 0% 100%, 50% 0);
+    clip-path: polygon(0 0, 0% 100%, 51% 0);
     background-color: rgba($color-black-pearl, 0.5);
   }
 
@@ -24,7 +24,7 @@
 .consultation__wrapper {
   position: relative;
   max-width: 1220px;
-  padding: 170px 0 250px;
+  padding: 165px 0 250px;
   margin: 0 auto;
   z-index: 1;
   display: flex;
@@ -33,16 +33,19 @@
   align-items: center;
 
   @include vp-1023 {
-    padding: 50px 0 125px;
+    padding: 45px 0 122px;
   }
 
   @include vp-767 {
-    padding: 50px 0 90px;
+    padding: 47px 0 88px;
   }
 }
 
 .consultation__wrapper img {
   display: block;
+  position: relative;
+  left: 9px;
+  top: 12px;
 
   @include vp-1023 {
     display: none;
@@ -66,12 +69,16 @@
   line-height: 51px;
   color: $color-default-white;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+
+  @include vp-1023 {
+    margin-bottom: 7px;
+  }
 
   @include vp-767 {
     font-size: 30px;
     line-height: 42px;
-    margin-bottom: 20px;
+    margin-bottom: 7px;
   }
 }
 
@@ -81,9 +88,13 @@
   margin: 0;
   margin-bottom: 35px;
 
+  @include vp-1023 {
+    margin-bottom: 24px;
+  }
+
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
-    margin-bottom: 40px;
+    margin-bottom: 33px;
   }
 }

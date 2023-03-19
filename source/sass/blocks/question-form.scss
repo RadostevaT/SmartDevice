@@ -15,8 +15,15 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   align-items: end;
+  margin-top: 10px;
+
+  @include vp-1023 {
+    margin-top: 15px;
+    align-items: center;
+  }
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    margin-top: 11px;
   }
 }

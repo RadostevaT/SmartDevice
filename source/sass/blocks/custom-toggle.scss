@@ -3,6 +3,7 @@
   font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
+  cursor: pointer;
 
   max-width: 260px;
 
@@ -21,7 +22,7 @@
     height: 15px;
     border: 1px solid $color-default-white;
     border-radius: 3px;
-    transition: border 0.3s ease;
+    transition: border $trans-default;
 
     &::before {
       content: "";
@@ -49,6 +50,11 @@
     align-items: center;
 
     cursor: pointer;
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
   }
 
   &.is-invalid {

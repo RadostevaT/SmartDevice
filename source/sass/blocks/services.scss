@@ -45,6 +45,26 @@
 
 .services__item {
   position: relative;
+  transition: transform $trans-default;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border-top-left-radius: 3px;
+    background-color: $color-deep-sky-blue;
+    background-image: url("../../img/svg/services-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include hover-focus {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px 5px rgba($color-default-white, 0.3);
+  }
 }
 
 .services__item img {
@@ -80,18 +100,4 @@
     left: 30px;
     font-size: 20px;
   }
-}
-
-.services__item::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 60px;
-  height: 60px;
-  border-top-left-radius: 3px;
-  background-color: $color-deep-sky-blue;
-  background-image: url("../../img/svg/services-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }

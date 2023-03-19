@@ -29,11 +29,7 @@
         color: $color-default-white;
       }
 
-      &:hover {
-        border: 1px solid rgba($color-black-pearl, 0.5);
-      }
-
-      &:focus {
+      @include hover-focus {
         border: 1px solid rgba($color-black-pearl, 0.5);
       }
     }

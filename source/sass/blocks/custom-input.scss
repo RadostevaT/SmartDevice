@@ -41,7 +41,7 @@
       transition: border 0.3s ease;
 
       &::placeholder {
-        color: $color-default-white;
+        color: rgba($color-default-white, 0.8);
       }
 
       @include hover-focus {

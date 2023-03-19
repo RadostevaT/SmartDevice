@@ -681,7 +681,7 @@ button,
   padding: 11px 15px;
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid #f2f5f6;
-  margin-right: 20px;
+  margin-right: 43px;
 }
 
 .btn-accordion {
@@ -729,6 +729,9 @@ button,
   line-height: 19px;
   width: 265px;
   display: block;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .btn-callback {
@@ -959,35 +962,35 @@ button,
 .custom-input label textarea::-webkit-input-placeholder,
 .custom-textarea label input::-webkit-input-placeholder,
 .custom-textarea label textarea::-webkit-input-placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .custom-input label input::-moz-placeholder,
 .custom-input label textarea::-moz-placeholder,
 .custom-textarea label input::-moz-placeholder,
 .custom-textarea label textarea::-moz-placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .custom-input label input:-ms-input-placeholder,
 .custom-input label textarea:-ms-input-placeholder,
 .custom-textarea label input:-ms-input-placeholder,
 .custom-textarea label textarea:-ms-input-placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .custom-input label input::-ms-input-placeholder,
 .custom-input label textarea::-ms-input-placeholder,
 .custom-textarea label input::-ms-input-placeholder,
 .custom-textarea label textarea::-ms-input-placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .custom-input label input::placeholder,
 .custom-input label textarea::placeholder,
 .custom-textarea label input::placeholder,
 .custom-textarea label textarea::placeholder {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .custom-input label input.focus-visible:focus,
@@ -1023,8 +1026,10 @@ button,
   line-height: 16px;
   color: #ffffff;
   cursor: pointer;
-  position: relative;
   left: 13px;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
   max-width: 260px;
 }
 
@@ -1055,7 +1060,7 @@ button,
   height: 6px;
   top: 3px;
   left: 2px;
-  background-image: url(../../img/svg/checkbox-arrow.svg);
+  background-image: url("../../img/svg/checkbox-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transform: scale(0);
@@ -1386,8 +1391,10 @@ button,
 
 .main-header__wrapper {
   margin: 0 auto;
-  max-width: 1180px;
-  min-height: 120px;
+  max-width: 1250px;
+}
+
+.main-header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1403,9 +1410,8 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-bottom: 5px;
-  position: relative;
-  left: -12px;
+  min-height: 120px;
+  padding: 0 25px 5px;
 }
 
 .main-header__logo-link {
@@ -1440,6 +1446,7 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   min-width: 480px;
+  max-width: 480px;
   padding-bottom: 5px;
   margin-left: 11px;
 }
@@ -2043,7 +2050,7 @@ button,
     position: absolute;
   }
 
-  .main-header__wrapper {
+  .main-header__inner {
     padding: 0;
     min-height: 100px;
   }
@@ -2316,7 +2323,7 @@ button,
     left: 5px;
   }
 
-  .main-header__wrapper {
+  .main-header__inner {
     min-width: 259px;
     min-height: 70px;
     left: 0;

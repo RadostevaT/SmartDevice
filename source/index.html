@@ -15,7 +15,7 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="manifest" href="./manifest.webmanifest">
 </head>
 
 <body>
@@ -23,29 +23,31 @@
     <header>
       <div class="container main-header" data-fix-block>
         <div class="main-header__wrapper">
-          <a class="main-header__logo-link" href="#">
-            <svg class="main-header__logo main-header__logo--desktop" width="215" height="55">
-              <use xlink:href="img/sprite.svg#logo-full"></use>
-            </svg>
-            <svg class="main-header__logo main-header__logo--mobile" width="35" height="35">
-              <use xlink:href="img/sprite.svg#logo"></use>
-            </svg>
-          </a>
-          <div class="main-header__contacts">
-            <a class="main-header__contacts-item" href="mailto:info@sd.ru">
-              <svg width="20" height="20">
-                <use xlink:href="img/sprite.svg#email"></use>
+          <div class="main-header__inner">
+            <a class="main-header__logo-link" href="#">
+              <svg class="main-header__logo main-header__logo--desktop" width="215" height="55">
+                <use xlink:href="img/sprite.svg#logo-full"></use>
               </svg>
-              <span>info@sd.ru</span>
-            </a>
-            <a class="main-header__contacts-item" href="tel:+74950005252">
-              <svg width="20" height="20">
-                <use xlink:href="img/sprite.svg#phone-call"></use>
+              <svg class="main-header__logo main-header__logo--mobile" width="35" height="35">
+                <use xlink:href="img/sprite.svg#logo"></use>
               </svg>
-              <span>+7 (495) 000 52 52</span>
             </a>
+            <div class="main-header__contacts">
+              <a class="main-header__contacts-item" href="mailto:info@sd.ru">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#email"></use>
+                </svg>
+                <span>info@sd.ru</span>
+              </a>
+              <a class="main-header__contacts-item" href="tel:+74950005252">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#phone-call"></use>
+                </svg>
+                <span>+7 (495) 000 52 52</span>
+              </a>
+            </div>
+            <a class="btn btn-call-request" href="#" data-open-modal="feedback">Заказать звонок</a>
           </div>
-          <a class="btn btn-call-request" href="#" data-open-modal="feedback">Заказать звонок</a>
         </div>
       </div>
     </header>
@@ -215,13 +217,13 @@
                   </label>
                 </div>
                 <div class="question-form__bottom">
-                  <button class="btn btn-question" type="submit">Задать вопрос</button>
                   <div class="custom-toggle" data-validate-type="checkbox">
                     <label>
                       <input type="checkbox" name="agreement">
                       Я&nbsp;согласен на&nbsp;обработку персональных данных
                     </label>
                   </div>
+                  <button class="btn btn-question" type="submit">Задать вопрос</button>
                 </div>
               </form>
             </div>
@@ -317,13 +319,13 @@
                 <textarea name="question" placeholder="Ваш вопрос"></textarea>
               </label>
             </div>
-            <button class="btn btn-callback" type="submit">Отправить</button>
             <div class="custom-toggle custom-toggle--callback" data-validate-type="checkbox">
               <label>
                 <input type="checkbox" name="agreement">
                 Я&nbsp;согласен на&nbsp;обработку персональных данных
               </label>
             </div>
+            <button class="btn btn-callback" type="submit">Отправить</button>
           </form>
         </div>
         <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal></button>

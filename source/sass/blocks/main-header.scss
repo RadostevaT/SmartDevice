@@ -11,16 +11,17 @@
 
 .main-header__wrapper {
   margin: 0 auto;
-  max-width: 1180px;
-  min-height: 120px;
+  max-width: 1250px;
+}
+
+.main-header__inner {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 5px;
-  position: relative;
-  left: -12px;
+  min-height: 120px;
+  padding: 0 25px 5px;
 
   @include vp-1023 {
     padding: 0;
@@ -74,6 +75,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   min-width: 480px;
+  max-width: 480px;
   padding-bottom: 5px;
   margin-left: 11px;
 

@@ -1060,7 +1060,7 @@ button,
   height: 6px;
   top: 3px;
   left: 2px;
-  background-image: url("../img/svg/checkbox-arrow.svg");
+  background-image: url("../../img/svg/checkbox-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transform: scale(0);

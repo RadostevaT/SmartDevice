@@ -1599,10 +1599,17 @@ button,
 
 .main-footer__nav-link {
   color: rgba(255, 255, 255, 0.7);
-  line-height: 20px;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 18px;
+  display: inline-block;
 }
 
 .main-footer__nav-link.focus-visible:focus {
@@ -1623,10 +1630,16 @@ button,
 
 .main-footer__phones a {
   color: rgba(255, 255, 255, 0.7);
-  display: block;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: inline-block;
 }
 
 .main-footer__phones a:not(:last-child) {

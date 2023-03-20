@@ -135,8 +135,11 @@
 
 .main-footer__nav-link {
   color: rgba($color-default-white, 0.7);
-  line-height: 20px;
   transition: opacity $trans-default;
+  width: fit-content;
+  height: fit-content;
+  line-height: 18px;
+  display: inline-block;
 
   @include hover-focus {
     opacity: 0.8;
@@ -175,8 +178,10 @@
 
 .main-footer__phones a {
   color: rgba($color-default-white, 0.7);
-  display: block;
   transition: opacity $trans-default;
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
 
   &:not(:last-child) {
     margin-bottom: 10px;

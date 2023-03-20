@@ -1060,7 +1060,7 @@ button,
   height: 6px;
   top: 3px;
   left: 2px;
-  background-image: url("../../img/svg/checkbox-arrow.svg");
+  background-image: url("../img/svg/checkbox-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transform: scale(0);
@@ -1652,7 +1652,7 @@ button,
 
 .promo {
   background-color: #041827;
-  background-image: url("../../img/main-background.jpg");
+  background-image: url("../img/main-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1785,7 +1785,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-image: url("../../img/2022.png");
+  background-image: url("../img/2022.png");
   background-repeat: no-repeat;
   background-size: 150px 320px;
 }
@@ -1857,7 +1857,7 @@ button,
   height: 60px;
   border-top-left-radius: 3px;
   background-color: #00b2ff;
-  background-image: url("../../img/svg/services-arrow.svg");
+  background-image: url("../img/svg/services-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -2678,10 +2678,10 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .promo {
-    background-image: url("../../img/main-background@2x.jpg");
+    background-image: url("../img/main-background@2x.jpg");
   }
 
   .about__wrapper {
-    background-image: url("../../img/2022@2x.png");
+    background-image: url("../img/2022@2x.png");
   }
 }

@@ -23,13 +23,10 @@
   min-width: 720px;
   max-width: 800px;
   padding-top: 305px;
-  position: relative;
-  left: -77px;
 
   @include vp-1023 {
     min-width: 660px;
     padding: 180px 0 0;
-    left: 0;
   }
 
   @include vp-767 {

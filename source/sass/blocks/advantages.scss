@@ -1,30 +1,27 @@
 .advantages__wrapper {
   margin: 0 auto;
   max-width: 1220px;
-  padding: 120px 0;
+  padding-top: 120px;
+  padding-bottom: 120px;
 
   @include vp-1023 {
-    padding: 80px 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   @include vp-767 {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 
 .advantages__list {
-  position: relative;
-  left: 9px;
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-
-  @include vp-1023 {
-    left: -5px;
-  }
 
   @include vp-767 {
     grid-template-columns: 1fr;

@@ -11,15 +11,6 @@
     flex-direction: column;
     gap: 0;
   }
-
-  &--footer {
-    position: relative;
-    left: 9px;
-
-    @include vp-1023 {
-      left: 0;
-    }
-  }
 }
 
 .accordion__element + .accordion__element,

@@ -20,40 +20,36 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <div class="container main-header" data-fix-block>
-        <div class="main-header__wrapper">
-          <div class="main-header__inner">
-            <a class="main-header__logo-link" href="#">
-              <svg class="main-header__logo main-header__logo--desktop" width="215" height="55">
-                <use xlink:href="img/sprite.svg#logo-full"></use>
-              </svg>
-              <svg class="main-header__logo main-header__logo--mobile" width="35" height="35">
-                <use xlink:href="img/sprite.svg#logo"></use>
-              </svg>
-            </a>
-            <div class="main-header__contacts">
-              <a class="main-header__contacts-item" href="mailto:info@sd.ru">
-                <svg width="20" height="20">
-                  <use xlink:href="img/sprite.svg#email"></use>
-                </svg>
-                <span>info@sd.ru</span>
-              </a>
-              <a class="main-header__contacts-item" href="tel:+74950005252">
-                <svg width="20" height="20">
-                  <use xlink:href="img/sprite.svg#phone-call"></use>
-                </svg>
-                <span>+7 (495) 000 52 52</span>
-              </a>
-            </div>
-            <a class="btn btn-call-request" href="#" data-open-modal="feedback">Заказать звонок</a>
-          </div>
+    <header class="main-header" data-fix-block>
+      <div class="main-header__wrapper container">
+        <a class="main-header__logo-link" href="#">
+          <svg class="main-header__logo main-header__logo--desktop" width="215" height="55">
+            <use xlink:href="img/sprite.svg#logo-full"></use>
+          </svg>
+          <svg class="main-header__logo main-header__logo--mobile" width="35" height="35">
+            <use xlink:href="img/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <div class="main-header__contacts">
+          <a class="main-header__contacts-item" href="mailto:info@sd.ru">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#email"></use>
+            </svg>
+            <span>info@sd.ru</span>
+          </a>
+          <a class="main-header__contacts-item" href="tel:+74950005252">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite.svg#phone-call"></use>
+            </svg>
+            <span>+7 (495) 000 52 52</span>
+          </a>
         </div>
+        <a class="btn btn-call-request" href="#" data-open-modal="feedback">Заказать звонок</a>
       </div>
     </header>
     <main>
-      <section class="promo container">
-        <div class="promo__wrapper">
+      <section class="promo">
+        <div class="promo__wrapper container">
           <h1>Печатные платы</h1>
           <h2>производство и монтаж, поставка комплектующих, блоков и модулей</h2>
           <a class="btn btn-consultation" href="#consultation" data-scroll-to-button>
@@ -62,8 +58,8 @@
           </a>
         </div>
       </section>
-      <section class="advantages container">
-        <div class="advantages__wrapper">
+      <section class="advantages">
+        <div class="advantages__wrapper container">
           <h2 class="visually-hidden">Наши преимущества</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
@@ -100,8 +96,8 @@
           </ul>
         </div>
       </section>
-      <section class="about container">
-        <div class="about__wrapper" data-accordion="parent">
+      <section class="about">
+        <div class="about__wrapper container" data-accordion="parent">
           <div data-accordion="element" data-read-more="parent">
             <h2>О компании</h2>
             <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
@@ -129,9 +125,10 @@
           </div>
         </div>
       </section>
-      <section class="services container">
-        <div class="services__wrapper">
-          <h2 class="services__title services__title--desktop">Smart Device предлагает следующие товары и&nbsp;услуги</h2>
+      <section class="services">
+        <div class="services__wrapper container">
+          <h2 class="services__title services__title--desktop">Smart Device предлагает следующие товары и&nbsp;услуги
+          </h2>
           <h2 class="services__title services__title--mobile">Товары и&nbsp;услуги Smart&nbsp;Device</h2>
           <div class="services__list">
             <a class="services__item" href="#">
@@ -188,8 +185,8 @@
           </div>
         </div>
       </section>
-      <section class="consultation container" id="consultation">
-        <div class="consultation__wrapper">
+      <section class="consultation" id="consultation">
+        <div class="consultation__wrapper container">
           <picture>
             <source type="image/webp" width="510" height="285"
               srcset="img/paper-airplane.webp 1x, img/paper-airplane@2x.webp 2x">
@@ -236,8 +233,8 @@
       </section>
     </main>
     <footer>
-      <div class="container main-footer">
-        <div class="main-footer__wrapper">
+      <div class="main-footer">
+        <div class="main-footer__wrapper container">
           <div class="main-footer__info">
             <a class="main-footer__logo-link" href="#">
               <svg width="215" height="55">
@@ -265,9 +262,11 @@
               </a>
             </div>
           </div>
-          <div class="accordion accordion--footer" data-accordion="parent" data-destroy="(max-width: 767px)" data-single>
+          <div class="accordion accordion--footer" data-accordion="parent" data-destroy="(max-width: 767px)"
+            data-single>
             <div class="accordion__element" data-accordion="element">
-              <button class="btn btn-accordion" type="button" data-accordion="button" tabindex="-1">Разделы сайта</button>
+              <button class="btn btn-accordion" type="button" data-accordion="button" tabindex="-1">Разделы
+                сайта</button>
               <div class="accordion__content" data-accordion="content">
                 <nav class="main-footer__nav">
                   <a class="main-footer__nav-link" href="#">О Компании</a>

@@ -638,7 +638,7 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -1400,7 +1400,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   min-height: 120px;
-  padding: 0 65px 5px;
+  padding: 0 25px 5px;
 }
 
 .main-header__logo-link {
@@ -1422,7 +1422,7 @@ button,
 }
 
 .main-header__contacts {
-  width: auto;
+  width: 100%;
   min-width: 395px;
   max-width: 480px;
   display: -webkit-box;
@@ -1444,10 +1444,7 @@ button,
 
 .main-header__contacts-item {
   max-width: 225px;
-  min-width: 210px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1491,8 +1488,6 @@ button,
 }
 
 .main-footer__wrapper {
-  max-width: 1220px;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1504,7 +1499,7 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding-top: 50px;
-  padding-bottom: 55px;
+  padding-bottom: 52px;
 }
 
 .main-footer__info {
@@ -1608,7 +1603,7 @@ button,
 }
 
 .main-footer__address {
-  max-width: 345px;
+  max-width: 336px;
   font-style: normal;
   line-height: 20px;
 }
@@ -1647,6 +1642,7 @@ button,
   background-position: center;
   background-size: cover;
   min-height: 880px;
+  padding-top: 120px;
 }
 
 @supports not (background-image: url("../../img/main-background.webp")) {
@@ -1664,8 +1660,9 @@ button,
 .promo__wrapper {
   margin: 0 auto;
   min-width: 720px;
-  max-width: 800px;
-  padding-top: 305px;
+  max-width: 1300px;
+  padding-top: 185px;
+  padding-left: 174px;
 }
 
 .promo h1 {
@@ -1697,10 +1694,7 @@ button,
 }
 
 .advantages__wrapper {
-  margin: 0 auto;
-  max-width: 1220px;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 120px 31px 120px 49px;
 }
 
 .advantages__list {
@@ -1771,31 +1765,23 @@ button,
 }
 
 .about__wrapper {
-  margin: 0 auto;
-  max-width: 1220px;
-  padding-bottom: 120px;
-  padding-left: 250px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  background-repeat: no-repeat;
-  background-size: 150px 320px;
+  padding: 0 33px 100px 48px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 150px minmax(760px, 970px);
+  grid-template-columns: 150px minmax(760px, 970px);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 30px;
 }
 
-@supports not (background-image: url("../../img/2022.webp")) {
-  .about__wrapper {
-    background-image: url("../../img/${bg}.@{ext}");
-  }
+.about__wrapper img {
+  display: block;
 }
 
-@supports (background-image: url("../../img/2022.webp")) {
-  .about__wrapper {
-    background-image: url("../../img/2022.webp");
-  }
+.about__inner {
+  width: auto;
 }
 
 .about__wrapper h2 {
@@ -1818,10 +1804,7 @@ button,
 }
 
 .services__wrapper {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding-top: 65px;
-  padding-bottom: 145px;
+  padding: 65px 32px 141px 49px;
 }
 
 .services__title {
@@ -1831,7 +1814,7 @@ button,
   font-size: 36px;
   line-height: 51px;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 54px;
 }
 
 .services__title--mobile {
@@ -1890,7 +1873,7 @@ button,
   color: #ffffff;
   margin: 0;
   position: absolute;
-  top: 50px;
+  top: 47px;
   left: 40px;
 }
 
@@ -1914,10 +1897,8 @@ button,
 
 .consultation__wrapper {
   position: relative;
-  max-width: 1220px;
   padding-top: 165px;
-  padding-bottom: 250px;
-  margin: 0 auto;
+  padding-bottom: 248px;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1938,7 +1919,7 @@ button,
   display: block;
   position: relative;
   left: 9px;
-  top: 12px;
+  top: 9px;
 }
 
 .consultation__inner {
@@ -1982,7 +1963,7 @@ button,
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: end;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .callback-form {
@@ -2072,7 +2053,7 @@ button,
   }
 
   .main-header__wrapper {
-    padding: 0;
+    padding: 0 62px 0 38px;
     min-height: 100px;
   }
 
@@ -2083,7 +2064,9 @@ button,
   }
 
   .main-header__contacts {
-    min-width: 100px;
+    max-width: 100px;
+    min-width: auto;
+    gap: 0;
     padding: 20px 0 40px;
     margin-right: 8px;
   }
@@ -2109,7 +2092,8 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-bottom: 65px;
+    padding-bottom: 61px;
+    padding-top: 50px;
   }
 
   .main-footer__info {
@@ -2147,12 +2131,13 @@ button,
 
   .promo {
     min-height: 640px;
+    padding-top: 0;
     background-position: top left -123px;
   }
 
   .promo__wrapper {
     min-width: 660px;
-    padding: 180px 0 0;
+    padding-top: 180px;
   }
 
   .promo h1 {
@@ -2166,8 +2151,7 @@ button,
   }
 
   .advantages__wrapper {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 80px 56px 80px 47px;
   }
 
   .advantages__item {
@@ -2184,8 +2168,9 @@ button,
   }
 
   .about__wrapper {
-    padding-left: 175px;
-    padding-bottom: 80px;
+    -ms-grid-columns: 150px minmax(490px, 760px);
+    grid-template-columns: 150px minmax(490px, 760px);
+    padding: 0 50px 80px 46px;
   }
 
   .about__wrapper h2 {
@@ -2221,7 +2206,8 @@ button,
   }
 
   .consultation__wrapper {
-    padding: 45px 0 122px;
+    padding-top: 45px;
+    padding-bottom: 122px;
   }
 
   .consultation__wrapper img {
@@ -2440,7 +2426,7 @@ button,
 
   .promo__wrapper {
     min-width: 270px;
-    padding: 150px 0 0;
+    padding-top: 150px;
   }
 
   .promo h1 {
@@ -2495,8 +2481,12 @@ button,
   }
 
   .about__wrapper {
-    background-size: 0;
-    padding-left: 0;
+    display: block;
+    padding-bottom: 77px;
+  }
+
+  .about__wrapper img {
+    display: none;
   }
 
   .about__wrapper h2 {
@@ -2553,7 +2543,8 @@ button,
   }
 
   .consultation__wrapper {
-    padding: 47px 0 88px;
+    padding-top: 47px;
+    padding-bottom: 88px;
   }
 
   .consultation__inner h2 {
@@ -2684,18 +2675,6 @@ button,
 @supports (background-image: url("../../img/main-background@2x.webp")) {
     .promo {
       background-image: url("../../img/main-background@2x.webp");
-    }
-}
-
-@supports not (background-image: url("../../img/2022@2x.webp")) {
-    .about__wrapper {
-      background-image: url("../../img/2022@2x.@{ext}");
-    }
-}
-
-@supports (background-image: url("../../img/2022@2x.webp")) {
-    .about__wrapper {
-      background-image: url("../../img/2022@2x.webp");
     }
 }
 }

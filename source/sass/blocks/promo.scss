@@ -4,11 +4,13 @@
   background-position: center;
   background-size: cover;
   min-height: 880px;
+  padding-top: 120px;
 
-  @include retina-bg($bg: 'main-background');
+  @include retina-bg($bg: "main-background");
 
   @include vp-1023 {
     min-height: 640px;
+    padding-top: 0;
     background-position: top left -123px;
   }
 
@@ -21,17 +23,18 @@
 .promo__wrapper {
   margin: 0 auto;
   min-width: 720px;
-  max-width: 800px;
-  padding-top: 305px;
+  max-width: 1300px;
+  padding-top: 185px;
+  padding-left: 174px;
 
   @include vp-1023 {
     min-width: 660px;
-    padding: 180px 0 0;
+    padding-top: 180px;
   }
 
   @include vp-767 {
     min-width: 270px;
-    padding: 150px 0 0;
+    padding-top: 150px;
   }
 }
 

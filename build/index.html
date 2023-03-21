@@ -22,7 +22,7 @@
   <div class="wrapper">
     <header class="main-header" data-fix-block>
       <div class="main-header__wrapper container">
-        <a class="main-header__logo-link" href="#">
+        <a class="main-header__logo-link" href="#" aria-label="Логотип компании и ссылка на главную страницу.">
           <svg class="main-header__logo main-header__logo--desktop" width="215" height="55">
             <use xlink:href="img/sprite.svg#logo-full"></use>
           </svg>
@@ -98,7 +98,11 @@
       </section>
       <section class="about">
         <div class="about__wrapper container" data-accordion="parent">
-          <div data-accordion="element" data-read-more="parent">
+          <picture>
+            <source type="image/webp" width="150" height="320" srcset="img/2022.webp 1x, img/2022@2x.webp 2x">
+            <img loading="lazy" width="150" height="320" src="img/2022.png" srcset="img/2022@2x.png 2x" alt="Год.">
+          </picture>
+          <div class="about__inner" data-accordion="element" data-read-more="parent">
             <h2>О компании</h2>
             <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
               технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.
@@ -232,11 +236,10 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="main-footer">
+    <footer class="main-footer">
         <div class="main-footer__wrapper container">
           <div class="main-footer__info">
-            <a class="main-footer__logo-link" href="#">
+            <a class="main-footer__logo-link" href="#" aria-label="Логотип компании и ссылка на главную страницу.">
               <svg width="215" height="55">
                 <use xlink:href="img/sprite.svg#logo-full"></use>
               </svg>
@@ -294,7 +297,6 @@
             </div>
           </div>
         </div>
-      </div>
     </footer>
   </div>
 

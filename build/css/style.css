@@ -1102,16 +1102,6 @@ button,
   width: 300px;
   padding: 14px 0 28px;
   margin: 0 0 44px 0;
-  /* &.is-valid {
-    .custom-select__button {
-      border: 2px solid $color-eucalyptus;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba($color-eucalyptus, 0.5);
-      }
-    }
-  } */
 }
 
 .custom-select__label {
@@ -1652,11 +1642,22 @@ button,
 
 .promo {
   background-color: #041827;
-  background-image: url("../../img/main-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   min-height: 880px;
+}
+
+@supports not (background-image: url("../../img/main-background.webp")) {
+  .promo {
+    background-image: url("../../img/${bg}.@{ext}");
+  }
+}
+
+@supports (background-image: url("../../img/main-background.webp")) {
+  .promo {
+    background-image: url("../../img/main-background.webp");
+  }
 }
 
 .promo__wrapper {
@@ -1785,9 +1786,20 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-image: url("../../img/2022.png");
   background-repeat: no-repeat;
   background-size: 150px 320px;
+}
+
+@supports not (background-image: url("../../img/2022.webp")) {
+  .about__wrapper {
+    background-image: url("../../img/${bg}.@{ext}");
+  }
+}
+
+@supports (background-image: url("../../img/2022.webp")) {
+  .about__wrapper {
+    background-image: url("../../img/2022.webp");
+  }
 }
 
 .about__wrapper h2 {
@@ -2677,11 +2689,27 @@ button,
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .promo {
-    background-image: url("../../img/main-background@2x.jpg");
-  }
+@supports not (background-image: url("../../img/main-background@2x.webp")) {
+    .promo {
+      background-image: url("../../img/main-background@2x.@{ext}");
+    }
+}
 
-  .about__wrapper {
-    background-image: url("../../img/2022@2x.png");
-  }
+@supports (background-image: url("../../img/main-background@2x.webp")) {
+    .promo {
+      background-image: url("../../img/main-background@2x.webp");
+    }
+}
+
+@supports not (background-image: url("../../img/2022@2x.webp")) {
+    .about__wrapper {
+      background-image: url("../../img/2022@2x.@{ext}");
+    }
+}
+
+@supports (background-image: url("../../img/2022@2x.webp")) {
+    .about__wrapper {
+      background-image: url("../../img/2022@2x.webp");
+    }
+}
 }

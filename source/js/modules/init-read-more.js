@@ -12,7 +12,9 @@ export const readMore = () => {
   };
 
   const initReadMoreButton = () => {
-    readMoreButton.addEventListener('click', readMoreButtonToggler);
+    if (readMoreButton) {
+      readMoreButton.addEventListener('click', readMoreButtonToggler);
+    }
   };
 
   initReadMoreButton();

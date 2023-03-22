@@ -2288,6 +2288,7 @@ button,
 
   .btn-question {
     width: 100%;
+    max-width: 100%;
     padding: 13px 25px;
   }
 
@@ -2462,7 +2463,11 @@ button,
   .advantages__item {
     max-width: 100%;
     min-height: 340px;
-    padding: 30px 30px 35px 34px;
+    padding: 30px 30px 35px 29px;
+  }
+
+  .advantages__item--short {
+    min-height: 325px;
   }
 
   .advantages__item svg {
@@ -2482,7 +2487,7 @@ button,
 
   .about__wrapper {
     display: block;
-    padding-bottom: 77px;
+    padding-bottom: 80px;
   }
 
   .about__wrapper img {

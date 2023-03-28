@@ -32,6 +32,7 @@
     border: 1px solid $color-default-white;
     border-radius: 3px;
     transition: border $trans-default;
+    cursor: pointer;
 
     &::before {
       content: "";

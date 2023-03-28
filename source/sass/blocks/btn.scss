@@ -36,7 +36,9 @@
   padding: 11px 15px;
   background-color: $color-transparent;
   border: 1px solid $color-alice-blue;
-  margin-right: 43px;
+  margin-right: 60px;
+  align-self: center;
+  margin-bottom: 10px;
 
   @include vp-1023 {
     display: none;

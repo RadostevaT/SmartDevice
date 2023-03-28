@@ -681,7 +681,11 @@ button,
   padding: 11px 15px;
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid #f2f5f6;
-  margin-right: 43px;
+  margin-right: 60px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin-bottom: 10px;
 }
 
 .btn-accordion {
@@ -1051,6 +1055,7 @@ button,
   -webkit-transition: border 0.3s ease;
   -o-transition: border 0.3s ease;
   transition: border 0.3s ease;
+  cursor: pointer;
 }
 
 .custom-toggle input::before {
@@ -1383,7 +1388,7 @@ button,
 
 .main-header__wrapper {
   margin: 0 auto;
-  max-width: 1250px;
+  max-width: 1280px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1400,13 +1405,14 @@ button,
   -ms-flex-align: center;
   align-items: center;
   min-height: 120px;
-  padding: 0 25px 5px;
+  padding: 5px 33px 5px 33px;
 }
 
 .main-header__logo-link {
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .main-header__logo-link.focus-visible:focus {
@@ -1424,7 +1430,7 @@ button,
 .main-header__contacts {
   width: 100%;
   min-width: 395px;
-  max-width: 480px;
+  max-width: 460px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1434,17 +1440,14 @@ button,
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  gap: 30px;
-  padding-bottom: 5px;
-  margin-left: 11px;
+  row-gap: 10px;
+  padding-bottom: 10px;
+  margin-left: -5px;
 }
 
 .main-header__contacts-item {
   max-width: 225px;
-  width: 100%;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1461,6 +1464,10 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+}
+
+.main-header__contacts-item:not(:last-child) {
+  margin-right: 120px;
 }
 
 .main-header__contacts-item.focus-visible:focus {
@@ -1498,8 +1505,7 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 50px;
-  padding-bottom: 52px;
+  padding: 50px 50px 52px 32px;
 }
 
 .main-footer__info {
@@ -1614,6 +1620,16 @@ button,
   margin-bottom: 10px;
 }
 
+.main-footer__phones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .main-footer__phones a {
   color: rgba(255, 255, 255, 0.7);
   -webkit-transition: opacity 0.3s ease;
@@ -1662,7 +1678,7 @@ button,
   min-width: 720px;
   max-width: 1300px;
   padding-top: 185px;
-  padding-left: 174px;
+  padding-left: 165px;
 }
 
 .promo h1 {
@@ -1694,7 +1710,7 @@ button,
 }
 
 .advantages__wrapper {
-  padding: 120px 31px 120px 49px;
+  padding: 120px 31px 120px 40px;
 }
 
 .advantages__list {
@@ -1765,7 +1781,7 @@ button,
 }
 
 .about__wrapper {
-  padding: 0 33px 100px 48px;
+  padding: 0 40px 100px 39px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 150px minmax(760px, 970px);
@@ -1804,7 +1820,7 @@ button,
 }
 
 .services__wrapper {
-  padding: 65px 32px 141px 49px;
+  padding: 65px 32px 141px 41px;
 }
 
 .services__title {
@@ -1897,8 +1913,7 @@ button,
 
 .consultation__wrapper {
   position: relative;
-  padding-top: 165px;
-  padding-bottom: 248px;
+  padding: 165px 46px 248px 32px;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2053,21 +2068,23 @@ button,
   }
 
   .main-header__wrapper {
-    padding: 0 62px 0 38px;
+    padding: 0 62px 0 50px;
     min-height: 100px;
   }
 
   .main-header__logo-link {
     position: relative;
-    left: 12px;
     top: -4px;
+    margin-bottom: 0;
   }
 
   .main-header__contacts {
-    max-width: 100px;
+    width: auto;
+    max-width: none;
     min-width: auto;
     gap: 0;
     padding: 20px 0 40px;
+    margin-left: auto;
     margin-right: 8px;
   }
 
@@ -2075,6 +2092,10 @@ button,
     width: 40px;
     height: 40px;
     padding: 10px;
+  }
+
+  .main-header__contacts-item:not(:last-child) {
+    margin-right: 20px;
   }
 
   .main-header__contacts-item span {
@@ -2323,10 +2344,6 @@ button,
   .main-header__wrapper {
     min-width: 259px;
     min-height: 70px;
-    left: 0;
-  }
-
-  .main-header__logo-link {
     left: 0;
   }
 

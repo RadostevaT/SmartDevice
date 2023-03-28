@@ -686,6 +686,7 @@ button,
   -ms-grid-row-align: center;
   align-self: center;
   margin-bottom: 10px;
+  max-width: 160px;
 }
 
 .btn-accordion {
